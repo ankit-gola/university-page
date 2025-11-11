@@ -1,0 +1,8 @@
+[
+  { "course": "B.Tech in Computer Science", "feeRange": "1,20,000 - 1,50,000 /year" },
+  { "course": "BBA in International Business", "feeRange": "90,000 - 1,10,000 /year" },
+  { "course": "MBA in Data Analytics", "feeRange": "1,80,000 - 2,20,000 /year" },
+  { "course": "M.Tech in Cybersecurity", "feeRange": "1,60,000 - 1,90,000 /year" },
+  { "course": "B.Sc. in Biotechnology", "feeRange": "1,00,000 - 1,30,000 /year" },
+  { "course": "BA in Digital Media", "feeRange": "85,000 - 1,10,000 /year" }
+]
