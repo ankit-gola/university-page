@@ -113,6 +113,8 @@ function University1() {
           </p>
         </section>
 
+
+
         {/* Courses Section */}
         <section id="courses" className="mb-12 scroll-mt-20">
           <h2 className={`text-3xl font-semibold mb-3 pb-2 border-b-2 ${themeClasses.subHeading}`}>
@@ -203,7 +205,7 @@ function University1() {
                     onChange={(e) => field.setValue(e.target.value)}
                     required
                     className={`mt-1 p-3 rounded-lg border focus:ring-2 outline-none 
-                      ${theme === "light" ? "bg-white text-gray-800 border-gray-300 focus:ring-blue-400" 
+                      ${theme === "light" ? "bg-white text-gray-800 border-gray-300 focus:ring-blue-400"
                         : "bg-gray-700 text-gray-100 border-gray-600 focus:ring-blue-400"}`}
                   />
                 </label>
@@ -220,33 +222,59 @@ function University1() {
         </section>
       </div>
 
-      {/* Footer */}
-      <footer className={`${themeClasses.footerBg} mt-16 py-10 px-6 rounded-t-3xl shadow-inner`}>
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
-          {/* Left: University Info */}
-          <div>
-            <h3 className="text-2xl font-semibold mb-2">Sunshine University</h3>
-            <p className={themeClasses.linkText}>Sunshine Avenue, Knowledge City, Pune, India</p>
-            <p className={`${themeClasses.linkText} mt-2`}>📞 +91 98765 43210</p>
-            <p className={themeClasses.linkText}>✉️ info@sunshineuniv.edu.in</p>
-          </div>
 
-          {/* Right: Quick Links */}
-          <div className="mt-6 md:mt-0 text-right mr-8 md:mr-12">
-            <h4 className="text-xl font-semibold mb-2">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><Link to="/" className={`hover:underline ${themeClasses.linkText}`}>Home</Link></li>
-              <li><a href="#admissions" className={`hover:underline ${themeClasses.linkText}`}>Admissions</a></li>
-              <li><a href="#courses" className={`hover:underline ${themeClasses.linkText}`}>Courses</a></li>
-              <li><Link to="/contact" className={`hover:underline ${themeClasses.linkText}`}>Contact</Link></li>
-            </ul>
-          </div>
-        </div>
+      {/* 🌿 Visit Other University Section */}
+      <div className="text-center my-10">
+        <h2 className={`text-2xl font-semibold mb-4 ${themeClasses.heading}`}>
+          Want to explore another great university?
+        </h2>
+        <Link
+          to="/university2"
+          className={`inline-block px-8 py-3 rounded-lg font-semibold text-white transition transform hover:scale-105 ${theme === "light"
+              ? "bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-indigo-500 hover:to-blue-500"
+              : "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-indigo-700 hover:to-blue-600"
+            }`}
+        >
+          🌿 Visit Riverdale University →
+        </Link>
+      </div>
 
-        <div className={`text-center mt-8 border-t pt-4 text-sm ${theme === "light" ? "border-blue-500 text-blue-100" : "border-gray-600 text-gray-400"}`}>
-          © {new Date().getFullYear()} Sunshine University. All rights reserved.
-        </div>
-      </footer>
+     {/* Footer */}
+<footer className={`${themeClasses.footerBg} mt-16 py-10 px-6 rounded-t-3xl shadow-inner`}>
+  <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
+    {/* Left: University Info */}
+    <div>
+      <h3 className="text-2xl font-semibold mb-2">Sunshine University</h3>
+      <p className={themeClasses.linkText}>Sunshine Avenue, Knowledge City, Pune, India</p>
+      <p className={`${themeClasses.linkText} mt-2`}>📞 +91 98765 43210</p>
+      <p className={themeClasses.linkText}>✉️ info@sunshineuniv.edu.in</p>
+    </div>
+
+    {/* Right: Quick Links */}
+    <div className="mt-6 md:mt-0 text-right mr-8 md:mr-12">
+      <h4 className="text-xl font-semibold mb-2">Quick Links</h4>
+      <ul className="space-y-2">
+        <li>
+          <Link
+            to="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className={`hover:underline ${themeClasses.linkText}`}
+          >
+            Home
+          </Link>
+        </li>
+        <li><a href="#admissions" className={`hover:underline ${themeClasses.linkText}`}>Admissions</a></li>
+        <li><a href="#courses" className={`hover:underline ${themeClasses.linkText}`}>Courses</a></li>
+        <li><Link to="/contact-sunshine" className={`hover:underline ${themeClasses.linkText}`}>Contact</Link></li>
+      </ul>
+    </div>
+  </div>
+
+  <div className={`text-center mt-8 border-t pt-4 text-sm ${theme === "light" ? "border-blue-500 text-blue-100" : "border-gray-600 text-gray-400"}`}>
+    © {new Date().getFullYear()} Sunshine University. All rights reserved.
+  </div>
+</footer>
+
     </div>
   );
 }

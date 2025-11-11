@@ -82,6 +82,7 @@ function University2() {
 
   return (
     <div id="top" className={`min-h-screen px-6 py-10 flex flex-col justify-between ${themeClasses.pageBg}`}>
+      {/* Main Card */}
       <div className={`max-w-5xl mx-auto rounded-3xl shadow-2xl p-10 md:p-16 ${themeClasses.cardBg} relative`}>
 
         {/* Theme Switcher Button */}
@@ -142,7 +143,7 @@ function University2() {
           </button>
         </div>
 
-        {/* Modal */}
+        {/* Fees Modal */}
         {showFeeModal && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 animate-fadeIn">
             <div className={`p-8 w-11/12 sm:w-2/3 md:w-1/2 relative rounded-2xl shadow-2xl ${themeClasses.cardBg}`}>
@@ -197,7 +198,7 @@ function University2() {
                     onChange={(e) => field.setValue(e.target.value)}
                     required
                     className={`mt-1 p-3 rounded-lg border focus:ring-2 outline-none 
-                      ${theme === "light" ? "bg-white text-gray-800 border-gray-300 focus:ring-green-400" 
+                      ${theme === "light" ? "bg-white text-gray-800 border-gray-300 focus:ring-green-400"
                         : "bg-gray-700 text-gray-100 border-gray-600 focus:ring-green-400"}`}
                   />
                 </label>
@@ -214,9 +215,27 @@ function University2() {
         </section>
       </div>
 
+      {/* 🌞 Back to Sunshine University Section */}
+      <div className="text-center my-10">
+        <h2 className={`text-2xl font-semibold mb-4 ${themeClasses.heading}`}>
+          Want to explore our partner university?
+        </h2>
+        <Link
+          to="/"
+          className={`inline-block px-8 py-3 rounded-lg font-semibold text-white transition transform hover:scale-105 ${theme === "light"
+              ? "bg-gradient-to-r from-green-500 to-teal-500 hover:from-teal-500 hover:to-green-500"
+              : "bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-600"
+            }`}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          ☀️ Back to Sunshine University →
+        </Link>
+      </div>
+
       {/* Footer */}
       <footer className={`${themeClasses.footerBg} mt-16 py-10 px-6 rounded-t-3xl shadow-inner`}>
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
+          {/* Left: University Info */}
           <div>
             <h3 className="text-2xl font-semibold mb-2">Riverdale University</h3>
             <p className={themeClasses.linkText}>Riverside Lane, Academic Park, Bengaluru, India</p>
@@ -224,17 +243,28 @@ function University2() {
             <p className={themeClasses.linkText}>✉️ info@riverdaleuniv.edu.in</p>
           </div>
 
+          {/* Right: Quick Links */}
           <div className="mt-6 md:mt-0 text-right mr-8 md:mr-12">
             <h4 className="text-xl font-semibold mb-2">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className={`hover:underline ${themeClasses.linkText}`}>
+                <button
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  className={`hover:underline ${themeClasses.linkText}`}
+                >
                   Home
                 </button>
               </li>
               <li><a href="#admissions" className={`hover:underline ${themeClasses.linkText}`}>Admissions</a></li>
               <li><a href="#courses" className={`hover:underline ${themeClasses.linkText}`}>Courses</a></li>
-              <li><Link to="/contact" className={`hover:underline ${themeClasses.linkText}`}>Contact</Link></li>
+              <li>
+                <Link
+                  to="/contact-riverdale"
+                  className={`hover:underline ${themeClasses.linkText}`}
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

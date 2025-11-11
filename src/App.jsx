@@ -1,48 +1,28 @@
-// import React from "react";
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import University1 from "./University1";
-// import University2 from "./University2";
-// import Contact from "./Contact"; // ✅ make sure this file exists in src/
-
-// function App() {
-//   return (
-//     <BrowserRouter>
-//       <Routes>
-//         <Route path="/" element={<University1 />} />
-//         <Route path="/university2" element={<University2 />} />
-//         <Route path="/contact" element={<Contact />} /> {/* ✅ Add this line */}
-//       </Routes>
-//     </BrowserRouter>
-//   );
-// }
-
-// export default App;
-
-
-
-
-
-
-// App.jsx
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Import your pages from the pages folder
-import University1 from "./Pages/University1";
-import University2 from "./Pages/University2";
-import Contact from "./Contact";
+// ✅ Import main pages
+import University1 from "./pages/University1";
+import University2 from "./pages/University2";
+
+// ✅ Import contact pages
+import ContactSunshine from "./pages/ContactSunshine";
+import ContactRiverdalePage from "./pages/ContactRiverdalePage";
 
 function App() {
   return (
     <Router>
       <Routes>
+        {/* University pages */}
         <Route path="/" element={<University1 />} />
         <Route path="/university2" element={<University2 />} />
-        <Route path="/contact" element={<Contact />} />
+
+        {/* Contact pages */}
+        <Route path="/contact-sunshine" element={<ContactSunshine />} />
+        <Route path="/contact-riverdale" element={<ContactRiverdalePage />} />
       </Routes>
     </Router>
   );
 }
 
 export default App;
-
