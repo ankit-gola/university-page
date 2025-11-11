@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // ✅ Import main pages
-import University1 from "./pages/University1";
-import University2 from "./pages/University2";
+import University1 from "./Pages/University1";
+import University2 from "./Pages/University2";
 
 // ✅ Import contact pages
 import ContactSunshine from "./pages/ContactSunshine";
