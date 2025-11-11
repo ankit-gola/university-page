@@ -6,8 +6,8 @@ import University1 from "./Pages/University1";
 import University2 from "./Pages/University2";
 
 // ✅ Import contact pages
-import ContactSunshine from "./pages/ContactSunshine";
-import ContactRiverdalePage from "./pages/ContactRiverdalePage";
+import ContactSunshine from "./Pages/ContactSunshine";
+import ContactRiverdalePage from "./Pages/ContactRiverdalePage";
 
 function App() {
   return (
